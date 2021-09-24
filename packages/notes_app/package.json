@@ -20,8 +20,10 @@
     "url": "git+https://github.com/CBernjus/udemy_node_js.git"
   },
   "scripts": {
-    "dev": "nodemon --inspect src/app.ts",
-    "prod": "tsc -b && nodemon --inspect dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "dev:debug": "nodemon --inspect src/app.ts",
+    "start": "ts-node src/app.ts",
+    "prod": "tsc -b && node dist/app.js",
     "build": "tsc -b",
     "watch": "tsc -b -w --preserveWatchOutput",
     "clean": "rm -rf ./dist && rm tsconfig.tsbuildinfo"
@@ -29,8 +31,17 @@
   "bugs": {
     "url": "https://github.com/CBernjus/udemy_node_js/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "yargs": "^17.2.0"
+  },
   "devDependencies": {
-    "nodemon": "^2.0.13"
+    "cz-conventional-changelog": "^3.3.0",
+    "nodemon": "^2.0.13",
+    "ts-node": "^10.2.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

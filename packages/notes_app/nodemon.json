@@ -1,0 +1,18 @@
+{
+    "watch": [
+        "src"
+    ],
+    "ext": "ts,js,json",
+    "ignore": [
+        "node_modules",
+        "coverage",
+        "dist"
+    ],
+    "execMap": {
+        "ts": "node --require ts-node/register"
+    },
+    "restartable": "rs",
+    "env": {
+        "NODE_ENV": "development"
+    }
+}
