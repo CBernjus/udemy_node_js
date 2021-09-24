@@ -1,0 +1,36 @@
+{
+  "name": "notes_app",
+  "version": "1.0.0",
+  "description": "a simple notes manager",
+  "author": "Christopher Bernjus <christopher.bernjus@stud.tu-darmstadt.de>",
+  "homepage": "https://github.com/CBernjus/udemy_node_js#readme",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/app.js",
+  "types": "dist/app.d.ts",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CBernjus/udemy_node_js.git"
+  },
+  "scripts": {
+    "dev": "nodemon --inspect src/app.ts",
+    "prod": "tsc -b && nodemon --inspect dist/app.js",
+    "build": "tsc -b",
+    "watch": "tsc -b -w --preserveWatchOutput",
+    "clean": "rm -rf ./dist && rm tsconfig.tsbuildinfo"
+  },
+  "bugs": {
+    "url": "https://github.com/CBernjus/udemy_node_js/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

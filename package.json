@@ -1,0 +1,53 @@
+{
+  "name": "udemy_node_js",
+  "version": "1.0.0",
+  "description": "my implementation of the udemy course on nodejs by Andrew Mead",
+  "repository": "https://github.com/CBernjus/udemy_node_js.git",
+  "author": "Christopher Bernjus <christopher.bernjus@stud.tu-darmstadt.de>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build --stream",
+    "watch": "lerna run watch --parallel",
+    "lint": "eslint ./packages --ext .ts,.tsx",
+    "lint:fix": "eslint ./packages --fix -ext .ts,.tsx",
+    "clean": "rm -rf .build && lerna run clean --parallel",
+    "test": "yarn build && jest --passWithNoTests",
+    "test:watch": "yarn build && jest --watch --passWithNoTests",
+    "test:coverage": "yarn build && jest --coverage --passWithNoTests",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.9.6",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-jest": "^24.4.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "husky": "^7.0.2",
+    "jest": "^27.2.1",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
