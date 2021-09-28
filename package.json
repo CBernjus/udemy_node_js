@@ -12,8 +12,8 @@
   "scripts": {
     "build": "lerna run build --stream",
     "watch": "lerna run watch --parallel",
-    "lint": "eslint ./packages --ext .ts,.tsx",
-    "lint:fix": "eslint ./packages --fix -ext .ts,.tsx",
+    "lint": "eslint ./packages",
+    "lint:fix": "eslint ./packages --fix",
     "clean": "rm -rf .build && lerna run clean --parallel",
     "test": "yarn build && jest --passWithNoTests",
     "test:watch": "yarn build && jest --watch --passWithNoTests",
